@@ -1,16 +1,20 @@
-# This is a sample Python script.
+class Ticket :
+    def init(self,nm,a,gen) :
+        self.name = nm
+        self.age = a
+        self.gender = gen
+    def getName(self) :
+        return self.name
+    def getage(self) :
+        return self.age
+    def getGender(self) :
+        return self.gender
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+class Compartment(Ticket) :
+    def init(self,nm,a,gen,comp) :
+        super().init(nm,a,gen)
+        self.block = comp
+    def getage(self) :
+        print(self.name+" "+self.age+ " "+self.gender+" "+self.block)
+c = Compartment("SNEHITH","18","M","Ac")
+c.getage()
